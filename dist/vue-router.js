@@ -317,6 +317,7 @@ function getFullPath (
 }
 
 function isSameRoute (a, b) {
+  if (a.path != location.pathname) { return false; }
   if (b === START) {
     return a === b
   } else if (!b) {
